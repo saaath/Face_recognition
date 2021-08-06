@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block title %}Registration{% endblock %}
+{% block content %}
+
+<div id="particles-js"></div><center>
+<form action="registration" method="POST" style="background-color: white;padding: 10px;width: 350px;">
+
+    {% csrf_token %}
+
+    <div style="color: black;">
+    <h2>Registration</h2><br>
+    <label>Username</label>
+    <input type="text" placeholder="username" name="username"><br><br>
+    <label>Password</label>
+    <input type="text" placeholder="password" name="password"><br><br>
+    <label>Email</label>
+    <input type="email" placeholder="Email" name="email"><br><br>
+    <input type="submit"></div>
+</form></center>
+<footer style="bottom:0%;background-color: rgb(28, 28, 28);padding:2em 0;margin-top:1em;position:absolute;width:100%;">
+    <p class="text-center" style="margin-bottom:0;color:#fff">Created by Prajwal and Dileep </p>
+  </footer>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}Login Page{% endblock %}
+
+{% block content %}
+
+<div id="particles-js"></div><center>
+
+    <form action="." method="POST" style="background-color: white;padding: 10px;width: 350px;">
+        {% csrf_token %}
+        <div style="color: black;">
+            <h1>Login</h1>
+            <label>Username</label>
+            <input type="text" placeholder="Enter Username" name="username"><br><br>
+            <label>Password</label>
+            <input type="password" placeholder="Enter Password" name="password">
+            <br><br><button type="submit">Login</button><br><br>
+            <a href="registration">SignUp</a>
+        </div>
+    </form></center>
+    <footer style="bottom:0%;background-color: rgb(28, 28, 28);padding:2em 0;margin-top:1em;position:absolute;width:100%;">
+        <p class="text-center" style="margin-bottom:0;color:#fff">Created by Prajwal and Dileep </p>
+      </footer>
+{% endblock %}

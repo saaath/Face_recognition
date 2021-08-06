@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Add Details{% endblock %}
+{% block content %}
+<div id="particles-js"></div>
+
+<div style="display: inline-flex;">
+  <div class="col-md-12" style="margin-top:2em">
+    <a href="adminpage" class="btn btn-warning"><i class="fa fa-chevron-left" aria-hidden="true"></i>BACK</a>
+  </div>
+</div>
+<center>
+<form action="add_record" enctype="multipart/form-data" id=""method="POST" style="background-color: #F9F9F9;padding: 30px;width: 400px;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div style="color: black;"><h2 style="margin-top: 0%;margin-bottom: 20px;">Add new details</h2>
+    <table style="font-family: arial, sans-serif;">
+      <tr><td>
+    <label>First Name</label></td><td>
+    <input type="text" placeholder="First Name" name="fname"><br><br></td></tr>
+    <tr><td>
+    <label>Last name</label></td><td>
+    <input type="text" placeholder="Last Name" name="lname"><br><br></td></tr>
+    <tr><td>
+    <label>Id</label></td><td>
+    <input type="number" placeholder="Id" name="id"><br><br></td></tr>
+    <tr><td>
+    <label>Country</label></td><td>
+    <input type="text" placeholder="Country" name="country"><br><br></td></tr>
+    <tr><td>
+    <label>Residence</label></td><td>
+    <input type="text" placeholder="Residence" name="res"><br><br></td></tr>
+    <tr><td>
+    <label>Education</label></td><td>
+    <input type="text" placeholder="Education" name="edu"><br><br></td></tr>
+    <tr><td>
+    <label>Occupation</label></td><td>
+    <input type="text" placeholder="Occupation" name="occupation"><br><br></td></tr>
+    
+    <tr><td>
+    <label>Marital Status</label><div></td><td>
+      <input type="radio" id="s" name="ms" value="single">
+      <label for="s">Single</label><br>
+      <input type="radio" id="m" name="ms" value="maried">
+      <label for="m">Maried</label><br></div></td></tr>
+<tr><td>
+    <label for="bio1">Bio</label></td><td>
+    <textarea id="bio1" name="bio" rows="4" cols="30">
+    </textarea>
+    <br><br></td></tr>
+    <tr><td>
+      <label>Image</label></td><td>
+      <input type="file" name='img1'><br><br></td></tr></div>
+  </table>
+    <input type="submit" style="width: auto;padding: 10px 18px;background-color:black;color: blanchedalmond;">
+  
+</div>
+</form></center>
+{% endblock %}
